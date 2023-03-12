@@ -14,8 +14,8 @@ app.use(cors());
 const server = http.createServer(app);
 
 app.use(express.static('build'));
-app.get('/',cors(), (req, res, next) => {
-    res.sendFile(path.join(__dirname='/build/index.html'));
+app.get('*',cors(), (req, res, next) => {
+    res.sendFile(path.join(__dirname,'build','index.html'));
 });
 
 userList = [];
